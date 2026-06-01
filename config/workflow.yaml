@@ -1,0 +1,10 @@
+workflow: support_knowledge_retrieval
+user_need: "Agents answer billing questions correctly and quickly"
+output_pattern: cited_answer        # ranked_results | cited_answer | draft | context_packet
+sources: [help_center, ticket_history, billing_db]
+success_metrics:
+  top1_relevance:       ">= 0.85"
+  citation_accuracy:    ">= 0.95"
+  median_latency_ms:    "<= 800"
+  escalation_reduction: ">= 15%"
+review: human_in_loop               # who signs off on output quality

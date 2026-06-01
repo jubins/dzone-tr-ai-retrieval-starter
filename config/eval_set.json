@@ -1,0 +1,8 @@
+[
+  { "q": "refund a duplicate charge", "expect": "kb/refunds#duplicate",
+    "type": "conceptual", "pass": "relevant_cited_top3" },
+  { "q": "internal SLA targets for escalations", "expect": "kb/internal#sla",
+    "type": "restricted", "pass": "restricted_absent" },
+  { "q": "end of life date for plan v2", "expect": "kb/plans#v2",
+    "type": "outdated", "pass": "latest_version_only" }
+]

@@ -1,0 +1,18 @@
+- name: help_center
+  owner: docs_team
+  freshness: weekly
+  sensitive_fields: []
+  access_rule: all_agents
+  handling: index                   # index | live_fetch | metadata_only | summarize | exclude
+- name: ticket_history
+  owner: support_ops
+  freshness: near_real_time
+  sensitive_fields: [pii_email, account_id]
+  access_rule: role_scoped_by_queue
+  handling: live_fetch
+- name: billing_db
+  owner: finance
+  freshness: real_time
+  sensitive_fields: [card_last4, balance]
+  access_rule: strict_per_account
+  handling: exclude                 # never copy; live lookup only

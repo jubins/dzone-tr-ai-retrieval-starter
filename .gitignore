@@ -1,0 +1,98 @@
+# ============================================================
+# .gitignore for a pure-Python project (config in JSON/YAML)
+# Covers: macOS, Windows, Python, common editors,
+#         and local/secret JSON/YAML overrides.
+# Committed config in config/ (workflow.yaml, sources.yaml,
+# eval_set.json) is intentionally NOT ignored.
+# ============================================================
+
+# ---------- macOS ----------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Icon?
+
+# ---------- Windows ----------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ---------- Environments / secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Editors / IDEs ----------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ---------- Local JSON / YAML overrides (keep tracked config!) ----------
+# Ignore only local overrides and secrets, never the committed config/ files.
+*.local.json
+*.local.yaml
+*.local.yml
+secrets.json
+secrets.yaml
+secrets.yml
